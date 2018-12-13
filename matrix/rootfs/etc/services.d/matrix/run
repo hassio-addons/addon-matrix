@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bash
+# ==============================================================================
+# Community Hass.io Add-ons: Matrix
+# Runs the NGINX daemon
+# ==============================================================================
+# shellcheck disable=SC1091
+source /usr/lib/hassio-addons/base.sh
+
+exec python2 -B -m synapse.app.homeserver -c /config/matrix/synapse.yaml
