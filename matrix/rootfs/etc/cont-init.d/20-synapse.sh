@@ -10,11 +10,11 @@ if ! hass.file_exists "/config/matrix.yaml"; then
     hass.log.info "Config file at '/config/matrix.yaml' does not exist. Creating.."
     python2 -m synapse.app.homeserver \
         --server-name "hassio" \
-        --config-path /data/matrix/synapse.yaml \
+        --config-path /data/matrix/matrix.yaml \
         --generate-config \
         --report-stats=no
 
-    mv /data/matrix/synapse.yaml /config/synapse.yaml
+    mv /data/matrix/matrix.yaml /config/matrix.yaml
 
     yq delete --inplace /config/matrix.yaml 'listeners[1]'
     yq write --inplace /config/matrix.yaml 'enable_registration' true
