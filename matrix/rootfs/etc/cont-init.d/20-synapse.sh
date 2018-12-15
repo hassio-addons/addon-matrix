@@ -26,6 +26,7 @@ if ! hass.file_exists "/config/matrix/synapse.yaml"; then
     yq write --inplace /config/matrix/synapse.yaml 'database.args.database' /data/matrix.db
     yq write --inplace /config/matrix/synapse.yaml 'media_store_path' /data/matrix/media
     yq write --inplace /config/matrix/synapse.yaml 'uploads_path' /data/matrix/uploads
+    yq write --inplace /config/matrix/synapse.yaml 'max_upload_size' '200M'
 fi
 
 if hass.config.true 'ssl'; then
