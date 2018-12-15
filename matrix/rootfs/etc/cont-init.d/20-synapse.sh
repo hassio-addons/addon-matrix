@@ -24,8 +24,8 @@ if ! hass.file_exists "/config/matrix/synapse.yaml"; then
     yq delete --inplace /config/matrix/synapse.yaml 'listeners[1]'
     yq write --inplace /config/matrix/synapse.yaml 'enable_registration' true
     yq write --inplace /config/matrix/synapse.yaml 'database.args.database' /data/matrix.db
-    yq write --inplace /config/matrix/synapse.yaml 'media_store_path' /share/matrix/media
-    yq write --inplace /config/matrix/synapse.yaml 'uploads_path' /share/matrix/uploads
+    yq write --inplace /config/matrix/synapse.yaml 'media_store_path' /data/matrix/media
+    yq write --inplace /config/matrix/synapse.yaml 'uploads_path' /data/matrix/uploads
 fi
 
 if hass.config.true 'ssl'; then
