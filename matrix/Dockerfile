@@ -5,10 +5,6 @@ FROM ${BUILD_FROM}
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-# TODO
-# - Add riot web frontend
-# - Test connection with desktop, web and mobile clients
-
 # Setup Matrix Synapse
 RUN \
     apk add --no-cache --virtual .build-dependencies \
@@ -45,11 +41,7 @@ RUN \
         pysaml2==4.6.5 \
         matrix-synapse==0.33.9 \
     \
-    && apk del --purge .build-dependencies \
-    && mkdir -p /opt/riot-im \
-    && wget -O riot.tar.gz https://github.com/vector-im/riot-web/releases/download/v0.17.8/riot-v0.17.8.tar.gz \
-    && tar xzf riot.tar.gz -C /opt/riot-im --strip 1 \
-    && rm riot.tar.gz
+    && apk del --purge .build-dependencies
 
 # Copy root filesystem
 COPY rootfs /
@@ -67,7 +59,7 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="Franck Nijhof <frenck@addons.community>" \
+    maintainer="Timmo <contact@timmo.xyz>" \
     org.label-schema.description="A secure and decentralized communication platform." \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name="Matrix" \

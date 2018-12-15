@@ -24,8 +24,7 @@ A secure and decentralized communication platform.
 
 Matrix is a secure and decentralized communication platform served as an
  in-house and open-source alternative for platfoms like Discord or Slack. You
- can connect via your own client, via the built-in web client or via the Riot
- web client provided from this add-on.
+ can connect via your own [client][clients], or via the built-in web client.
 
 ## Installation
 
@@ -241,3 +240,4 @@ SOFTWARE.
 [releases]: https://github.com/hassio-addons/addon-matrix/releases
 [repository]: https://github.com/hassio-addons/repository
 [semver]: http://semver.org/spec/v2.0.0.htm
+[clients]: https://matrix.org/docs/projects/try-matrix-now.html
