@@ -6,4 +6,4 @@
 # shellcheck disable=SC1091
 source /usr/lib/hassio-addons/base.sh
 
-exec python2 -B -m synapse.app.homeserver -c /config/matrix/synapse.yaml
+exec python2 -B -m synapse.app.homeserver -c /config/matrix.yaml
