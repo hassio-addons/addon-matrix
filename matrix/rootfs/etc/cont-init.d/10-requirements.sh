@@ -24,3 +24,7 @@ if hass.config.true 'ssl'; then
         hass.die 'The configured keyfile is not found'
     fi
 fi
+
+if ! hass.config.has_value 'server_name'; then
+    hass.die 'You must specify your server name! Eg: yourddns_url.com'
+fi
