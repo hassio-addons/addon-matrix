@@ -27,13 +27,15 @@
     "log_level": "info",
     "ssl": true,
     "certfile": "fullchain.pem",
-    "keyfile": "privkey.pem"
+    "keyfile": "privkey.pem",
+    "server_name": "hassio"
   },
   "schema": {
     "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)",
     "ssl": "bool",
     "certfile": "str",
-    "keyfile": "str"
+    "keyfile": "str",
+    "server_name": "str"
   },
   "environment": {
     "LOG_FORMAT": "{LEVEL}: {MESSAGE}"

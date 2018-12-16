@@ -9,7 +9,7 @@ source /usr/lib/hassio-addons/base.sh
 if ! hass.file_exists "/config/matrix.yaml"; then
     hass.log.info "Config file at '/config/matrix.yaml' does not exist. Creating.."
     python2 -m synapse.app.homeserver \
-        --server-name "hassio" \
+        --server-name $(hass.config.get 'server_name') \
         --config-path /data/matrix/matrix.yaml \
         --generate-config \
         --report-stats=no
