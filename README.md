@@ -16,7 +16,7 @@
 
 [![Support my work on Patreon][patreon-shield]][patreon]
 
-![HADashboard screenshot](images/screenshot.png)
+![Screenshot](images/screenshot.png)
 
 A secure and decentralized communication platform.
 
@@ -24,7 +24,7 @@ A secure and decentralized communication platform.
 
 Matrix is a secure and decentralized communication platform served as an
  in-house and open-source alternative for platfoms like Discord or Slack. You
- can connect via your own [client][clients], or via the built-in web client.
+ can connect via your own [clients][clients], or via the built-in web client.
 
 ## Installation
 
@@ -33,6 +33,8 @@ comparison to installing any other Hass.io add-on.
 
 1. [Add our Hass.io add-ons repository][repository] to your Hass.io instance.
 1. Install the "Matrix" add-on.
+1. Set your `server_name` as the hostname of the instance you will be using.
+ This is an important step for integrating other services later.
 1. Start the "Matrix" add-on
 1. Check the logs of the "Matrix" add-on to see if everything went well.
 
@@ -76,11 +78,12 @@ Example add-on configuration:
   "log_level": "info",
   "ssl": true,
   "certfile": "fullchain.pem",
-  "keyfile": "privkey.pem"
+  "keyfile": "privkey.pem",
+  "server_name": "yourddns_url.com"
 }
 ```
 
-**Note**: _This is just an example, don't copy and past it! Create your own!_
+**Note**: _This is just an example, don't copy and paste it! Create your own!_
 
 ### Option: `log_level`
 
@@ -101,6 +104,33 @@ the `log_level` is set to `info`, which is the recommended setting unless
 you are troubleshooting.
 
 These log level also affects the log levels of the Matrix.
+
+### Option: `ssl`
+
+Enables/Disables SSL (HTTPS) on the IDE. Set it `true` to enable it,
+`false` otherwise.
+
+### Option: `certfile`
+
+The certificate file to use for SSL.
+
+**Note**: _The file MUST be stored in `/ssl/`, which is default for Hass.io_
+
+### Option: `keyfile`
+
+The private key file to use for SSL.
+
+**Note**: _The file MUST be stored in `/ssl/`, which is default for Hass.io_
+
+### Option: `server_name`
+
+This is the hostname of your server. Set this to the host that you will be
+ connecting to with your clients without the port and without `http://` /
+ `https://`. For example: if your domain name is `home-assistant.io` set your
+ `server_name` to this.
+
+**Note**: _You should only set this once. You will likely have to reinsall the
+ addon to change this after the fact, losing all your rooms and users._
 
 ## Changelog & Releases
 
