@@ -39,7 +39,7 @@ RUN \
     && pip2 install --upgrade pip==18.1 \
     && pip2 install \
         pysaml2==4.6.5 \
-        matrix-synapse==0.33.9 \
+        matrix-synapse==0.34.0 \
     \
     && apk del --purge .build-dependencies
 
