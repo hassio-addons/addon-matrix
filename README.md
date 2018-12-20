@@ -173,7 +173,7 @@ Thank you for being involved! :heart_eyes:
 
 ## Authors & contributors
 
-The original setup of this repository is by [Franck Nijhof][frenck].
+The original setup of this repository is by [Timmo][timmo].
 
 For a full list of all authors and contributors,
 check [the contributor's page][contributors].
@@ -189,7 +189,7 @@ our [GitHub Repository][repository].
 
 MIT License
 
-Copyright (c) 2018 Franck Nijhof
+Copyright (c) 2018 Timmo
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -237,7 +237,7 @@ SOFTWARE.
 [bountysource-shield]: https://img.shields.io/bountysource/team/hassio-addons/activity.svg
 [bountysource]: https://www.bountysource.com/teams/hassio-addons/issues
 [buymeacoffee-shield]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg
-[buymeacoffee]: https://www.buymeacoffee.com/frenck
+[buymeacoffee]: https://www.buymeacoffee.com/timmo
 [commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-matrix.svg
 [commits]: https://github.com/hassio-addons/addon-matrix/commits/master
 [contributors]: https://github.com/hassio-addons/addon-matrix/graphs/contributors
@@ -246,7 +246,7 @@ SOFTWARE.
 [discord]: https://discord.me/hassioaddons
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
 [forum]: https://community.home-assistant.io
-[frenck]: https://github.com/frenck
+[timmo]: https://github.com/timmo001
 [gitlabci-shield]: https://gitlab.com/hassio-addons/addon-matrix/badges/master/pipeline.svg
 [gitlabci]: https://gitlab.com/hassio-addons/addon-matrix/pipelines
 [home-assistant]: https://home-assistant.io
