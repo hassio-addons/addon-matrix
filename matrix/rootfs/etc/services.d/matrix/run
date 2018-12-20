@@ -1,7 +1,7 @@
 #!/usr/bin/with-contenv bash
 # ==============================================================================
 # Community Hass.io Add-ons: Matrix
-# Runs the NGINX daemon
+# Runs the Synapse daemon
 # ==============================================================================
 # shellcheck disable=SC1091
 source /usr/lib/hassio-addons/base.sh

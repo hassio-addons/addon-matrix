@@ -1,7 +1,7 @@
 #!/usr/bin/with-contenv bash
 # ==============================================================================
 # Community Hass.io Add-ons: Matrix
-# This files check if all user configuration requirements are met
+# Configures the Matrix Synapse server
 # ==============================================================================
 # shellcheck disable=SC1091
 source /usr/lib/hassio-addons/base.sh
