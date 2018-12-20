@@ -43,29 +43,13 @@ comparison to installing any other Hass.io add-on.
 
 ## Docker status
 
-[![Docker Architecture][armhf-arch-shield]][armhf-dockerhub]
-[![Docker Version][armhf-version-shield]][armhf-microbadger]
-[![Docker Layers][armhf-layers-shield]][armhf-microbadger]
-[![Docker Pulls][armhf-pulls-shield]][armhf-dockerhub]
-[![Anchore Image Overview][armhf-anchore-shield]][armhf-anchore]
+![Supports armhf Architecture][armhf-shield]
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+![Supports i386 Architecture][i386-shield]
 
-[![Docker Architecture][aarch64-arch-shield]][aarch64-dockerhub]
-[![Docker Version][aarch64-version-shield]][aarch64-microbadger]
-[![Docker Layers][aarch64-layers-shield]][aarch64-microbadger]
-[![Docker Pulls][aarch64-pulls-shield]][aarch64-dockerhub]
-[![Anchore Image Overview][aarch64-anchore-shield]][aarch64-anchore]
-
-[![Docker Architecture][amd64-arch-shield]][amd64-dockerhub]
-[![Docker Version][amd64-version-shield]][amd64-microbadger]
-[![Docker Layers][amd64-layers-shield]][amd64-microbadger]
-[![Docker Pulls][amd64-pulls-shield]][amd64-dockerhub]
-[![Anchore Image Overview][amd64-anchore-shield]][amd64-anchore]
-
-[![Docker Architecture][i386-arch-shield]][i386-dockerhub]
-[![Docker Version][i386-version-shield]][i386-microbadger]
-[![Docker Layers][i386-layers-shield]][i386-microbadger]
-[![Docker Pulls][i386-pulls-shield]][i386-dockerhub]
-[![Anchore Image Overview][i386-anchore-shield]][i386-anchore]
+[![Docker Layers][layers-shield]][microbadger]
+[![Docker Pulls][pulls-shield]][dockerhub]
 
 ## Configuration
 
@@ -209,31 +193,14 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[aarch64-anchore-shield]: https://anchore.io/service/badges/image/455bd9cba7f1e89ef182ce142230053b77e40fc7e01d3ef127636d7410ee5dcb
-[aarch64-anchore]: https://anchore.io/image/dockerhub/hassioaddons%2Fmatrix-aarch64%3Alatest
-[aarch64-arch-shield]: https://img.shields.io/badge/architecture-aarch64-blue.svg
-[aarch64-dockerhub]: https://hub.docker.com/r/hassioaddons/matrix-aarch64
-[aarch64-layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/matrix-aarch64.svg
-[aarch64-microbadger]: https://microbadger.com/images/hassioaddons/matrix-aarch64
-[aarch64-pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/matrix-aarch64.svg
-[aarch64-version-shield]: https://images.microbadger.com/badges/version/hassioaddons/matrix-aarch64.svg
-[alpine-packages]: https://pkgs.alpinelinux.org/packages
-[amd64-anchore-shield]: https://anchore.io/service/badges/image/32da6e9da8fc42adcbb6da2ade62b24f84ce08c9490069aea9026267df23ab26
-[amd64-anchore]: https://anchore.io/image/dockerhub/hassioaddons%2Fmatrix-amd64%3Alatest
-[amd64-arch-shield]: https://img.shields.io/badge/architecture-amd64-blue.svg
-[amd64-dockerhub]: https://hub.docker.com/r/hassioaddons/matrix-amd64
-[amd64-layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/matrix-amd64.svg
-[amd64-microbadger]: https://microbadger.com/images/hassioaddons/matrix-amd64
-[amd64-pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/matrix-amd64.svg
-[amd64-version-shield]: https://images.microbadger.com/badges/version/hassioaddons/matrix-amd64.svg
-[armhf-anchore-shield]: https://anchore.io/service/badges/image/a7b22fe5d4d5108d9455bd6b531dac365fe54f89962626611b56297240951527
-[armhf-anchore]: https://anchore.io/image/dockerhub/hassioaddons%2Fmatrix-armhf%3Alatest
-[armhf-arch-shield]: https://img.shields.io/badge/architecture-armhf-blue.svg
-[armhf-dockerhub]: https://hub.docker.com/r/hassioaddons/matrix-armhf
-[armhf-layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/matrix-armhf.svg
-[armhf-microbadger]: https://microbadger.com/images/hassioaddons/matrix-armhf
-[armhf-pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/matrix-armhf.svg
-[armhf-version-shield]: https://images.microbadger.com/badges/version/hassioaddons/matrix-armhf.svg
+[microbadger]: https://microbadger.com/images/hassioaddons/matrix
+[dockerhub]: https://hub.docker.com/r/hassioaddons/matrix
+[layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/matrix.svg
+[pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/matrix.svg
+[armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
+[aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
+[amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
+[i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [bountysource-shield]: https://img.shields.io/bountysource/team/hassio-addons/activity.svg
 [bountysource]: https://www.bountysource.com/teams/hassio-addons/issues
 [buymeacoffee-shield]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg
@@ -250,14 +217,6 @@ SOFTWARE.
 [gitlabci-shield]: https://gitlab.com/hassio-addons/addon-matrix/badges/master/pipeline.svg
 [gitlabci]: https://gitlab.com/hassio-addons/addon-matrix/pipelines
 [home-assistant]: https://home-assistant.io
-[i386-anchore-shield]: https://anchore.io/service/badges/image/0da227504ac93f94e8787876d430fec49a6f4aadfd8347f6ac7b9f2b58bc61f9
-[i386-anchore]: https://anchore.io/image/dockerhub/hassioaddons%2Fmatrix-i386%3Alatest
-[i386-arch-shield]: https://img.shields.io/badge/architecture-i386-blue.svg
-[i386-dockerhub]: https://hub.docker.com/r/hassioaddons/matrix-i386
-[i386-layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/matrix-i386.svg
-[i386-microbadger]: https://microbadger.com/images/hassioaddons/matrix-i386
-[i386-pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/matrix-i386.svg
-[i386-version-shield]: https://images.microbadger.com/badges/version/hassioaddons/matrix-i386.svg
 [issue]: https://github.com/hassio-addons/addon-matrix/issues
 [keepchangelog]: http://keepachangelog.com/en/1.0.0/
 [license-shield]: https://img.shields.io/github/license/hassio-addons/addon-matrix.svg
