@@ -18,9 +18,9 @@ if ! hass.file_exists "/config/matrix.yaml"; then
 
     yq delete --inplace /config/matrix.yaml 'listeners[1]'
     yq write --inplace /config/matrix.yaml 'enable_registration' true
-    yq write --inplace /config/matrix.yaml 'database.args.database' /data/matrix.db
-    yq write --inplace /config/matrix.yaml 'media_store_path' /data/matrix/media
-    yq write --inplace /config/matrix.yaml 'uploads_path' /data/matrix/uploads
+    yq write --inplace /config/matrix.yaml 'database.args.database' /share/matrix/matrix.db
+    yq write --inplace /config/matrix.yaml 'media_store_path' /share/matrix/media
+    yq write --inplace /config/matrix.yaml 'uploads_path' /share/matrix/uploads
     yq write --inplace /config/matrix.yaml 'max_upload_size' '200M'
 fi
 
