@@ -24,6 +24,7 @@ RUN \
         libpq=10.5-r0 \
         libressl=2.7.4-r0 \
         libxslt=1.1.32-r0 \
+        nginx=1.14.2-r0 \
         py3-lxml=4.2.2-r0 \
         py3-msgpack=0.5.6-r0 \
         py3-pillow=4.3.0-r0 \
@@ -40,7 +41,13 @@ RUN \
         pysaml2==4.6.5 \
         matrix-synapse==0.34.0 \
     \
-    && apk del --purge .build-dependencies
+    && mkdir -p /opt/riot \
+    && curl -J -L -o /tmp/riot.tar.gz \
+        "https://github.com/vector-im/riot-web/releases/download/v0.17.8/riot-v0.17.8.tar.gz" \
+    && tar xzf /tmp/riot.tar.gz -C /opt/riot --strip 1 \
+    \
+    && apk del --purge .build-dependencies \
+    && rm -fr /tmp/*
 
 # Copy root filesystem
 COPY rootfs /

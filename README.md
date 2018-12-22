@@ -24,7 +24,8 @@ A secure and decentralized communication platform.
 
 Matrix is a secure and decentralized communication platform served as an
  in-house and open-source alternative for platfoms like Discord or Slack. You
- can connect via your own [clients][clients], or via the built-in web client.
+ can connect via your own [clients][clients], or via via the Riot web client
+ provided from this add-on.
 
 ## Installation
 
