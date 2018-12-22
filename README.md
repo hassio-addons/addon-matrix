@@ -36,8 +36,14 @@ comparison to installing any other Hass.io add-on.
 1. Install the "Matrix" add-on.
 1. Set your `server_name` as the hostname of the instance you will be using.
  This is an important step for integrating other services later.
-1. Start the "Matrix" add-on
+1. Start the "Matrix" add-on.
 1. Check the logs of the "Matrix" add-on to see if everything went well.
+1. Click "Open Web UI".
+1. You can then register via the message that appears at the top of the app.
+1. Change the server address to your own via "Custom server" and set the
+ "Home server URL" to yours. By default this will be
+ `https://yourservername:8448`. You can check this by navigating to this URL
+ and you will be presented with a welcome message.
 
 **NOTE**: Do not add this repository to Hass.io, please use:
 `https://github.com/hassio-addons/repository`.
@@ -114,7 +120,7 @@ This is the hostname of your server. Set this to the host that you will be
  `https://`. For example: if your domain name is `home-assistant.io` set your
  `server_name` to this.
 
-**Note**: _You should only set this once. You will likely have to reinsall the
+**Note**: _You should only set this once. You will likely have to reinstall the
  addon to change this after the fact, losing all your rooms and users._
 
 ## Changelog & Releases
