@@ -14,8 +14,6 @@
 
 [![Buy me a coffee][buymeacoffee-shield]][buymeacoffee]
 
-[![Support my work on Patreon][patreon-shield]][patreon]
-
 ![Screenshot](images/screenshot.png)
 
 A secure and decentralized communication platform.
@@ -230,7 +228,7 @@ SOFTWARE.
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2018.svg
 [patreon-shield]: https://www.frenck.nl/images/patreon.png
 [patreon]: https://www.patreon.com/
-[project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20ready-brightgreen.svg
+[project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
 [reddit]: https://reddit.com/r/homeassistant
 [releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-matrix.svg
 [releases]: https://github.com/hassio-addons/addon-matrix/releases
