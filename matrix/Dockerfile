@@ -29,7 +29,7 @@ RUN \
         py3-msgpack=0.5.6-r0 \
         py3-pillow=4.3.0-r0 \
         py3-psycopg2=2.7.5-r0 \
-        py3-pynacl=1.2.1-r1	\
+        py3-pynacl=1.2.1-r1\
         py3-setuptools=39.1.0-r0 \
         py3-six=1.11.0-r0 \
         python3=3.6.6-r0 \
