@@ -36,7 +36,7 @@ RUN \
         su-exec=0.2-r0 \
         zlib=1.2.11-r1 \
     \
-    && pip3 install --upgrade pip==18.1 \
+    && pip3 install --upgrade pip==19.0.1 \
     && pip3 install \
         pysaml2==4.6.5 \
         matrix-synapse==0.34.1.1 \
