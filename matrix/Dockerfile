@@ -1,4 +1,4 @@
-ARG BUILD_FROM=hassioaddons/base:2.3.1
+ARG BUILD_FROM=hassioaddons/base:2.3.2
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -39,7 +39,7 @@ RUN \
     && pip3 install --upgrade pip==19.0.1 \
     && pip3 install \
         pysaml2==4.6.5 \
-        matrix-synapse==0.99.1.1 \
+        matrix-synapse==0.99.2 \
     \
     && mkdir -p /opt/riot \
     && curl -J -L -o /tmp/riot.tar.gz \
