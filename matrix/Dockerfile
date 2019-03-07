@@ -43,7 +43,7 @@ RUN \
     \
     && mkdir -p /opt/riot \
     && curl -J -L -o /tmp/riot.tar.gz \
-        "https://github.com/vector-im/riot-web/releases/download/v1.0.1/riot-v1.0.1.tar.gz" \
+        "https://github.com/vector-im/riot-web/releases/download/v1.0.3/riot-v1.0.1.tar.gz" \
     && tar xzf /tmp/riot.tar.gz -C /opt/riot --strip 1 \
     \
     && apk del --purge .build-dependencies \
