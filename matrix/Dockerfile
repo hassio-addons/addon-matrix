@@ -22,7 +22,7 @@ RUN \
         libffi=3.2.1-r4 \
         libjpeg-turbo=1.5.3-r4 \
         libpq=10.5-r0 \
-        libressl=2.7.4-r0 \
+        libressl=2.7.5-r0 \
         libxslt=1.1.32-r0 \
         nginx=1.14.2-r0 \
         py3-lxml=4.2.2-r0 \
