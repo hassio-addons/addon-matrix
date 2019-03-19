@@ -113,9 +113,9 @@ The private key file to use for SSL.
 ### Option: `server_name`
 
 This is the hostname of your server. Set this to the host that you will be
- connecting to with your clients without the port and without `http://` /
- `https://`. For example: if your domain name is `home-assistant.io` set your
- `server_name` to this.
+connecting to with your clients without the port and without the
+`http://` or`https://`. For example: if your domain name is
+`home-assistant.io` set your `server_name` to this.
 
 **Note**: _You should only set this once. You will likely have to reinstall the
  addon to change this after the fact, losing all your rooms and users._

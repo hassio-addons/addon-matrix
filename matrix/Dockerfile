@@ -1,4 +1,4 @@
-ARG BUILD_FROM=hassioaddons/base:2.3.2
+ARG BUILD_FROM=hassioaddons/base:3.0.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -9,34 +9,35 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r1 \
-        libffi-dev=3.2.1-r4 \
+        libffi-dev=3.2.1-r6 \
         libjpeg-turbo-dev=1.5.3-r4 \
         libressl-dev=2.7.5-r0 \
         libxslt-dev=1.1.32-r0 \
-        linux-headers=4.4.6-r2 \
-        postgresql-dev=10.5-r0 \
-        python3-dev=3.6.6-r0 \
+        linux-headers=4.18.13-r1 \
+        musl-dev=1.1.20-r4 \
+        postgresql-dev=11.1-r0 \
+        python3-dev=3.6.8-r1 \
         zlib-dev=1.2.11-r1 \
     \
     && apk add --no-cache \
-        libffi=3.2.1-r4 \
+        libffi=3.2.1-r6 \
         libjpeg-turbo=1.5.3-r4 \
-        libpq=10.5-r0 \
+        libpq=11.1-r0 \
         libressl=2.7.5-r0 \
         libxslt=1.1.32-r0 \
         nginx=1.14.2-r0 \
-        py3-lxml=4.2.2-r0 \
-        py3-msgpack=0.5.6-r0 \
-        py3-pillow=4.3.0-r0 \
+        py3-lxml=4.2.5-r0 \
+        py3-msgpack=0.6.1-r0 \
+        py3-pillow=5.4.1-r0 \
         py3-psycopg2=2.7.5-r0 \
-        py3-pynacl=1.2.1-r1\
-        py3-setuptools=39.1.0-r0 \
+        py3-pynacl=1.3.0-r1 \
+        py3-setuptools=40.6.3-r0 \
         py3-six=1.11.0-r0 \
-        python3=3.6.6-r0 \
+        python3=3.6.8-r1 \
         su-exec=0.2-r0 \
         zlib=1.2.11-r1 \
     \
-    && pip3 install --upgrade pip==19.0.1 \
+    && pip3 install --upgrade pip==19.0.3 \
     && pip3 install \
         pysaml2==4.6.5 \
         matrix-synapse==0.99.2 \

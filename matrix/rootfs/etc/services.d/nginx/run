@@ -1,13 +1,10 @@
-#!/bin/bash
+#!/usr/bin/with-contenv bashio
 # ==============================================================================
 # Community Hass.io Add-ons: Matrix
 # Runs the NGINX daemon for Riot
 # ==============================================================================
-# shellcheck disable=SC1091
-source /usr/lib/hassio-addons/base.sh
-
-hass.log.info "Starting NGINX for Riot..."
-if hass.config.true 'ssl'; then
+bashio::log.info "Starting NGINX for Riot..."
+if bashio::config.true 'ssl'; then
     options='/etc/nginx/nginx-ssl.conf'
 else
     options='/etc/nginx/nginx.conf'

@@ -1,30 +1,16 @@
-#!/usr/bin/with-contenv bash
+#!/usr/bin/with-contenv bashio
 # ==============================================================================
 # Community Hass.io Add-ons: Matrix
 # This files check if all user configuration requirements are met
 # ==============================================================================
-# shellcheck disable=SC1091
-source /usr/lib/hassio-addons/base.sh
+# Check SSL settings
+bashio::config.require.ssl
 
-# Check SSL requirements, if enabled
-if hass.config.true 'ssl'; then
-    if ! hass.config.has_value 'certfile'; then
-        hass.die 'SSL is enabled, but no certfile was specified'
-    fi
-
-    if ! hass.config.has_value 'keyfile'; then
-        hass.die 'SSL is enabled, but no keyfile was specified'
-    fi
-
-    if ! hass.file_exists "/ssl/$(hass.config.get 'certfile')"; then
-        hass.die 'The configured certfile is not found'
-    fi
-
-    if ! hass.file_exists "/ssl/$(hass.config.get 'keyfile')"; then
-        hass.die 'The configured keyfile is not found'
-    fi
-fi
-
-if ! hass.config.has_value 'server_name'; then
-    hass.die 'You must specify your server name! E.g.: yourddns_url.com'
+if ! bashio::config.has_value 'server_name'; then
+    bashio::log.fatal ''
+    bashio::log.fatal 'You must specify your server name!'
+    bashio::log.fatal 'This should be the hostname of your server'
+    bashio::log.fatal 'without "http://" / "https://" and the port.'
+    bashio::log.fatal 'Refer to the "server_name" option in the docs for more info.'
+    bashio::exit.nok
 fi

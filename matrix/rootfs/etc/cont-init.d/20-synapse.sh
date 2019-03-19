@@ -1,27 +1,26 @@
-#!/usr/bin/with-contenv bash
+#!/usr/bin/with-contenv bashio
 # ==============================================================================
 # Community Hass.io Add-ons: Matrix
 # Configures the Matrix Synapse server
 # ==============================================================================
-# shellcheck disable=SC1091
-source /usr/lib/hassio-addons/base.sh
-
 declare server_name
-server_name=$(hass.config.get 'server_name')
+server_name=$(bashio::config 'server_name')
 
-if hass.file_exists "/config/matrix.yaml"; then
+if bashio::fs.file_exists "/config/matrix.yaml"; then
     declare old_name
     old_name=$(yq read /config/matrix.yaml 'server_name')
     if [[ "$old_name" != "$server_name" ]]; then
-        hass.log.fatal "The server_name has changed!"
-        hass.log.fatal "Are you sure you want to do this?"
-        hass.log.fatal "If so, delete the 'matrix.yaml' file located in '/config' and restart the addon."
-        hass.die "WARNING: This will remove all rooms, users, chats and start afresh."
+        bashio::log.fatal ''
+        bashio::log.fatal 'The server_name has changed!'
+        bashio::log.fatal 'Are you sure you want to do this?'
+        bashio::log.fatal 'If so, delete the "matrix.yaml" file located in "/config" and restart the addon.'
+        bashio::log.fatal 'WARNING: This will remove all rooms, users, chats and start afresh.'
+        bashio::exit.nok
     fi
 fi
 
-if ! hass.file_exists "/config/matrix.yaml"; then
-    hass.log.info "Config file at '/config/matrix.yaml' does not exist. Creating.."
+if ! bashio::fs.file_exists "/config/matrix.yaml"; then
+    bashio::log.info "Config file at '/config/matrix.yaml' does not exist. Creating.."
 
     rm -f /share/matrix/matrix.db
 
@@ -41,11 +40,11 @@ if ! hass.file_exists "/config/matrix.yaml"; then
     yq write --inplace /config/matrix.yaml 'max_upload_size' '200M'
 fi
 
-if hass.config.true 'ssl'; then
+if bashio::config.true 'ssl'; then
     yq write --inplace /config/matrix.yaml 'no_tls' false
     yq write --inplace /config/matrix.yaml 'listeners[0].tls' true
-    yq write --inplace /config/matrix.yaml 'tls_certificate_path' "/ssl/$(hass.config.get 'certfile')"
-    yq write --inplace /config/matrix.yaml 'tls_private_key_path' "/ssl/$(hass.config.get 'keyfile')"
+    yq write --inplace /config/matrix.yaml 'tls_certificate_path' "/ssl/$(bashio::config 'certfile')"
+    yq write --inplace /config/matrix.yaml 'tls_private_key_path' "/ssl/$(bashio::config 'keyfile')"
 else
     yq write --inplace /config/matrix.yaml 'no_tls' true
     yq write --inplace /config/matrix.yaml 'listeners[0].tls' false
