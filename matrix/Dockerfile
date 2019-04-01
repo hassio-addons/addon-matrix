@@ -40,7 +40,7 @@ RUN \
     && pip3 install --upgrade pip==19.0.3 \
     && pip3 install \
         pysaml2==4.6.5 \
-        matrix-synapse==0.99.2 \
+        matrix-synapse==0.99.3 \
     \
     && mkdir -p /opt/riot \
     && curl -J -L -o /tmp/riot.tar.gz \
