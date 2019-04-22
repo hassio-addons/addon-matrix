@@ -3,4 +3,5 @@
 # Community Hass.io Add-ons: Matrix
 # Runs the Synapse daemon
 # ==============================================================================
-exec python3.6 -B -m synapse.app.homeserver -c /config/matrix.yaml
+bashio::log.info "Starting Matrix Synapse..."
+exec python3 -B -m synapse.app.homeserver -c /config/matrix.yaml

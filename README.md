@@ -4,6 +4,12 @@
 ![Project Stage][project-stage-shield]
 [![License][license-shield]](LICENSE.md)
 
+![Supports armhf Architecture][armhf-shield]
+![Supports armv7 Architecture][armv7-shield]
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+![Supports i386 Architecture][i386-shield]
+
 [![GitLab CI][gitlabci-shield]][gitlabci]
 ![Project Maintenance][maintenance-shield]
 [![GitHub Activity][commits-shield]][commits]
@@ -44,16 +50,6 @@ comparison to installing any other Hass.io add-on.
 
 **NOTE**: Do not add this repository to Hass.io, please use:
 `https://github.com/hassio-addons/repository`.
-
-## Docker status
-
-![Supports armhf Architecture][armhf-shield]
-![Supports aarch64 Architecture][aarch64-shield]
-![Supports amd64 Architecture][amd64-shield]
-![Supports i386 Architecture][i386-shield]
-
-[![Docker Layers][layers-shield]][microbadger]
-[![Docker Pulls][pulls-shield]][dockerhub]
 
 ## Configuration
 
@@ -119,6 +115,15 @@ connecting to with your clients without the port and without the
 
 **Note**: _You should only set this once. You will likely have to reinstall the
  addon to change this after the fact, losing all your rooms and users._
+
+### Option: `leave_front_door_open`
+
+Adding this option to the add-on configuration allows you to disable HA
+authentication on the Riot interface by setting it to `true` and leaving the
+username and password empty.
+
+**Note**: _We STRONGLY suggest, not to use this, even if this add-on is
+only exposed to your internal network. USE AT YOUR OWN RISK!_
 
 ## Changelog & Releases
 
@@ -197,16 +202,13 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[microbadger]: https://microbadger.com/images/hassioaddons/matrix
-[dockerhub]: https://hub.docker.com/r/hassioaddons/matrix
-[layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/matrix.svg
-[pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/matrix.svg
-[armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
-[i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
+[armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
+[armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [buymeacoffee-shield]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg
 [buymeacoffee]: https://www.buymeacoffee.com/timmo
+[clients]: https://matrix.org/docs/projects/try-matrix-now.html
 [commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-matrix.svg
 [commits]: https://github.com/hassio-addons/addon-matrix/commits/master
 [contributors]: https://github.com/hassio-addons/addon-matrix/graphs/contributors
@@ -215,10 +217,10 @@ SOFTWARE.
 [discord]: https://discord.me/hassioaddons
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
 [forum]: https://community.home-assistant.io
-[timmo]: https://github.com/timmo001
 [gitlabci-shield]: https://gitlab.com/hassio-addons/addon-matrix/badges/master/pipeline.svg
 [gitlabci]: https://gitlab.com/hassio-addons/addon-matrix/pipelines
 [home-assistant]: https://home-assistant.io
+[i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [issue]: https://github.com/hassio-addons/addon-matrix/issues
 [keepchangelog]: http://keepachangelog.com/en/1.0.0/
 [license-shield]: https://img.shields.io/github/license/hassio-addons/addon-matrix.svg
@@ -231,4 +233,4 @@ SOFTWARE.
 [releases]: https://github.com/hassio-addons/addon-matrix/releases
 [repository]: https://github.com/hassio-addons/repository
 [semver]: http://semver.org/spec/v2.0.0.html
-[clients]: https://matrix.org/docs/projects/try-matrix-now.html
+[timmo]: https://github.com/timmo001

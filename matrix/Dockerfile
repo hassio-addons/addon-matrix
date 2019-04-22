@@ -1,9 +1,12 @@
-ARG BUILD_FROM=hassioaddons/base:3.0.0
+ARG BUILD_FROM=hassioaddons/base-python:1.1.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+# Copy Python requirements file
+COPY requirements.txt /tmp/
 
 # Setup Matrix Synapse
 RUN \
@@ -12,43 +15,40 @@ RUN \
         libffi-dev=3.2.1-r6 \
         libjpeg-turbo-dev=1.5.3-r4 \
         libressl-dev=2.7.5-r0 \
-        libxslt-dev=1.1.32-r0 \
+        libxslt-dev=1.1.33-r1 \
         linux-headers=4.18.13-r1 \
         musl-dev=1.1.20-r4 \
-        postgresql-dev=11.1-r0 \
-        python3-dev=3.6.8-r1 \
+        postgresql-dev=11.2-r0 \
         zlib-dev=1.2.11-r1 \
     \
     && apk add --no-cache \
         libffi=3.2.1-r6 \
         libjpeg-turbo=1.5.3-r4 \
-        libpq=11.1-r0 \
+        libpq=11.2-r0 \
         libressl=2.7.5-r0 \
-        libxslt=1.1.32-r0 \
+        libxslt=1.1.33-r1 \
+        lua-resty-http=0.12-r1 \
+        nginx-mod-http-lua=1.14.2-r0 \
         nginx=1.14.2-r0 \
-        py3-lxml=4.2.5-r0 \
-        py3-msgpack=0.6.1-r0 \
-        py3-pillow=5.4.1-r0 \
-        py3-psycopg2=2.7.5-r0 \
-        py3-pynacl=1.3.0-r1 \
-        py3-setuptools=40.6.3-r0 \
-        py3-six=1.11.0-r0 \
-        python3=3.6.8-r1 \
         su-exec=0.2-r0 \
         zlib=1.2.11-r1 \
     \
-    && pip3 install --upgrade pip==19.0.3 \
-    && pip3 install \
-        pysaml2==4.6.5 \
-        matrix-synapse==0.99.3 \
+    && pip3 install --no-cache-dir -r /tmp/requirements.txt \
     \
     && mkdir -p /opt/riot \
     && curl -J -L -o /tmp/riot.tar.gz \
-        "https://github.com/vector-im/riot-web/releases/download/v1.0.6/riot-v1.0.6.tar.gz" \
+        "https://github.com/vector-im/riot-web/releases/download/v1.0.8/riot-v1.0.8.tar.gz" \
     && tar xzf /tmp/riot.tar.gz -C /opt/riot --strip 1 \
     \
+    && find /usr/local \
+        \( -type d -a -name test -o -name tests -o -name '__pycache__' \) \
+        -o \( -type f -a -name '*.pyc' -o -name '*.pyo' \) \
+        -exec rm -rf '{}' + \
+    \
     && apk del --purge .build-dependencies \
-    && rm -fr /tmp/*
+    && rm -fr \
+        /etc/nginx \
+        /tmp/*
 
 # Copy root filesystem
 COPY rootfs /
