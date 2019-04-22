@@ -3,11 +3,13 @@
 # Community Hass.io Add-ons: Matrix
 # Runs the NGINX daemon for Riot
 # ==============================================================================
-bashio::log.info "Starting NGINX for Riot..."
-if bashio::config.true 'ssl'; then
-    options='/etc/nginx/nginx-ssl.conf'
-else
-    options='/etc/nginx/nginx.conf'
+# Wait for Synapse to start
+bashio::net.wait_for 8448
+
+# Disable HA Authentication if front door is open
+if bashio::config.true 'leave_front_door_open'; then
+    export DISABLE_HA_AUTHENTICATION=true
 fi
 
-exec nginx -c "$options"
+bashio::log.info "Starting NGINX..."
+exec nginx
