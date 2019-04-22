@@ -40,6 +40,8 @@ if ! bashio::fs.file_exists "${CONF}"; then
         --server-name "$server_name" \
         --config-path /data/matrix/matrix.yaml \
         --generate-config \
+        --generate-keys \
+        --keys-directory /data/matrix \
         --report-stats=no
 
     mv /data/matrix/matrix.yaml "${CONF}"
