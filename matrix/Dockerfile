@@ -29,7 +29,7 @@ RUN \
         libxslt=1.1.33-r1 \
         lua-resty-http=0.13-r0 \
         nginx-mod-http-lua=1.14.2-r0 \
-        nginx=1.14.2-r0 \
+        nginx=1.14.2-r1 \
         su-exec=0.2-r0 \
         zlib=1.2.11-r1 \
     \
