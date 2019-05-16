@@ -24,7 +24,7 @@ RUN \
     && apk add --no-cache \
         libffi=3.2.1-r6 \
         libjpeg-turbo=1.5.3-r4 \
-        libpq=11.2-r0 \
+        libpq=11.3-r0 \
         libressl=2.7.5-r0 \
         libxslt=1.1.33-r1 \
         lua-resty-http=0.13-r0 \
