@@ -18,7 +18,7 @@ RUN \
         libxslt-dev=1.1.33-r1 \
         linux-headers=4.18.13-r1 \
         musl-dev=1.1.20-r4 \
-        postgresql-dev=11.2-r0 \
+        postgresql-dev=11.3-r0 \
         zlib-dev=1.2.11-r1 \
     \
     && apk add --no-cache \
