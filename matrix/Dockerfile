@@ -13,23 +13,23 @@ RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r1 \
         libffi-dev=3.2.1-r6 \
-        libjpeg-turbo-dev=1.5.3-r4 \
+        libjpeg-turbo-dev=2.0.2-r0	 \
         libressl-dev=2.7.5-r0 \
         libxslt-dev=1.1.33-r1 \
-        linux-headers=4.18.13-r1 \
-        musl-dev=1.1.20-r4 \
-        postgresql-dev=11.3-r0 \
+        linux-headers=4.19.36-r0 \
+        musl-dev=1.1.22-r2 \
+        postgresql-dev=11.4-r0 \
         zlib-dev=1.2.11-r1 \
     \
     && apk add --no-cache \
         libffi=3.2.1-r6 \
-        libjpeg-turbo=1.5.3-r4 \
-        libpq=11.3-r0 \
+        libjpeg-turbo=2.0.2-r0 \
+        libpq=11.4-r0 \
         libressl=2.7.5-r0 \
         libxslt=1.1.33-r1 \
         lua-resty-http=0.13-r0 \
-        nginx-mod-http-lua=1.14.2-r1 \
-        nginx=1.14.2-r1 \
+        nginx-mod-http-lua=1.16.0-r2 \
+        nginx=1.16.0-r2 \
         su-exec=0.2-r0 \
         zlib=1.2.11-r1 \
     \
