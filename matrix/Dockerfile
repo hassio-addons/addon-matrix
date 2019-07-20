@@ -9,6 +9,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 COPY requirements.txt /tmp/
 
 # Setup Matrix Synapse
+ARG BUILD_ARCH=amd64
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r1 \
@@ -33,7 +34,10 @@ RUN \
         su-exec=0.2-r0 \
         zlib=1.2.11-r1 \
     \
-    && pip3 install --no-cache-dir -r /tmp/requirements.txt \
+    && pip3 install \
+        --no-cache-dir \
+        --find-links "https://wheels.home-assistant.io/alpine-3.10/${BUILD_ARCH}/" \
+        -r /tmp/requirements.txt \
     \
     && mkdir -p /opt/riot \
     && curl -J -L -o /tmp/riot.tar.gz \
@@ -54,7 +58,6 @@ RUN \
 COPY rootfs /
 
 # Build arguments
-ARG BUILD_ARCH
 ARG BUILD_DATE
 ARG BUILD_REF
 ARG BUILD_VERSION
