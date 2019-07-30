@@ -32,6 +32,7 @@ RUN \
         nginx-mod-http-lua=1.16.0-r2 \
         nginx=1.16.0-r2 \
         su-exec=0.2-r0 \
+        tiff=4.0.10-r0 \
         zlib=1.2.11-r1 \
     \
     && pip3 install \
