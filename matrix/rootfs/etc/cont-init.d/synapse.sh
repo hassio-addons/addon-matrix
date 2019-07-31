@@ -6,7 +6,7 @@
 readonly CONF="/config/matrix.yaml"
 declare server_name
 
-mv /opt/riot/config.sample.json config.json
+mv /opt/riot/config.sample.json /opt/riot/config.json
 
 if ! bashio::config.has_value 'server_name'; then
     bashio::log.fatal
