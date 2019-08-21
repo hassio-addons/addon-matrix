@@ -18,8 +18,8 @@ RUN \
         libressl-dev=2.7.5-r0 \
         libxslt-dev=1.1.33-r1 \
         linux-headers=4.19.36-r0 \
-        musl-dev=1.1.22-r2 \
         postgresql-dev=11.4-r0 \
+        musl-dev=1.1.22-r3 \
         zlib-dev=1.2.11-r1 \
     \
     && apk add --no-cache \
