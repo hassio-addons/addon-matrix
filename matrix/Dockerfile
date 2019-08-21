@@ -18,14 +18,14 @@ RUN \
         libressl-dev=2.7.5-r0 \
         libxslt-dev=1.1.33-r1 \
         linux-headers=4.19.36-r0 \
-        postgresql-dev=11.4-r0 \
         musl-dev=1.1.22-r3 \
+        postgresql-dev=11.5-r0 \
         zlib-dev=1.2.11-r1 \
     \
     && apk add --no-cache \
         libffi=3.2.1-r6 \
-        libpq=11.4-r0 \
         libjpeg-turbo=2.0.2-r0 \
+        libpq=11.5-r0 \
         libressl=2.7.5-r0 \
         libxslt=1.1.33-r1 \
         lua-resty-http=0.13-r0 \
