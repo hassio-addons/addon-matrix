@@ -42,7 +42,7 @@ RUN \
     \
     && mkdir -p /opt/riot \
     && curl -J -L -o /tmp/riot.tar.gz \
-        "https://github.com/vector-im/riot-web/releases/download/v1.3.0/riot-v1.3.0.tar.gz" \
+        "https://github.com/vector-im/riot-web/releases/download/v1.4.0/riot-v1.4.0.tar.gz" \
     && tar xzf /tmp/riot.tar.gz -C /opt/riot --strip 1 \
     \
     && find /usr/local \
