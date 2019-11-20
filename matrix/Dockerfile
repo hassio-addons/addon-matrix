@@ -29,8 +29,8 @@ RUN \
         libressl=2.7.5-r0 \
         libxslt=1.1.33-r2 \
         lua-resty-http=0.13-r0 \
-        nginx-mod-http-lua=1.16.1-r0 \
-        nginx=1.16.1-r0 \
+        nginx-mod-http-lua=1.16.1-r1 \
+        nginx=1.16.1-r1 \
         su-exec=0.2-r0 \
         tiff=4.0.10-r1 \
         zlib=1.2.11-r1 \
