@@ -16,7 +16,7 @@ RUN \
         libffi-dev=3.2.1-r6 \
         libjpeg-turbo-dev=2.0.3-r0	 \
         libressl-dev=2.7.5-r0 \
-        libxslt-dev=1.1.33-r1 \
+        libxslt-dev=1.1.33-r2 \
         linux-headers=4.19.36-r0 \
         musl-dev=1.1.22-r3 \
         postgresql-dev=11.5-r1 \
@@ -27,7 +27,7 @@ RUN \
         libjpeg-turbo=2.0.3-r0 \
         libpq=11.5-r1 \
         libressl=2.7.5-r0 \
-        libxslt=1.1.33-r1 \
+        libxslt=1.1.33-r2 \
         lua-resty-http=0.13-r0 \
         nginx-mod-http-lua=1.16.1-r0 \
         nginx=1.16.1-r0 \
