@@ -35,8 +35,7 @@ Matrix is a secure and decentralized communication platform served as an
 The installation of this add-on is pretty straightforward and not different in
 comparison to installing any other Hass.io add-on.
 
-1. [Add our Hass.io add-ons repository][repository] to your Hass.io instance.
-1. Install the "Matrix" add-on.
+1. Search for the "Matrix" add-on in the Hass.io add-on store and install it.
 1. Set your `server_name` as the hostname of the instance you will be using.
  This is an important step for integrating other services later.
 1. Start the "Matrix" add-on.
@@ -47,9 +46,6 @@ comparison to installing any other Hass.io add-on.
  "Home server URL" to yours. By default this will be
  `https://yourservername:8448`. You can check this by navigating to this URL
  and you will be presented with a welcome message.
-
-**NOTE**: Do not add this repository to Hass.io, please use:
-`https://github.com/hassio-addons/repository`.
 
 ## Configuration
 
