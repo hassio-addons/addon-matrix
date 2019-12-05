@@ -5,11 +5,14 @@ FROM ${BUILD_FROM}
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
+# Copy yq
+ARG BUILD_ARCH=amd64
+COPY bin/yq_${BUILD_ARCH} /usr/bin/yq
+
 # Copy Python requirements file
 COPY requirements.txt /tmp/
 
 # Setup Matrix Synapse
-ARG BUILD_ARCH=amd64
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r1 \
