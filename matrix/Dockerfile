@@ -18,7 +18,7 @@ RUN \
         build-base=0.5-r1 \
         libffi-dev=3.2.1-r6 \
         libjpeg-turbo-dev=2.0.3-r0	 \
-        libressl-dev=2.7.5-r0 \
+        libressl-dev=3.0.2-r0 \
         libxslt-dev=1.1.33-r2 \
         linux-headers=4.19.36-r0 \
         musl-dev=1.1.24-r0 \
@@ -29,7 +29,7 @@ RUN \
         libffi=3.2.1-r6 \
         libjpeg-turbo=2.0.3-r0 \
         libpq=11.6-r0 \
-        libressl=2.7.5-r0 \
+        libressl=3.0.2-r0 \
         libxslt=1.1.33-r2 \
         lua-resty-http=0.13-r0 \
         nginx-mod-http-lua=1.16.1-r1 \
