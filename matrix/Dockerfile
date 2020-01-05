@@ -23,7 +23,7 @@ RUN \
         linux-headers=4.19.36-r0 \
         musl-dev=1.1.24-r0 \
         postgresql-dev=12.1-r0 \
-        zlib-dev=1.2.11-r1 \
+        zlib-dev=1.2.11-r3 \
     \
     && apk add --no-cache \
         libffi=3.2.1-r6 \
