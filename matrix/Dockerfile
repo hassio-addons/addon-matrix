@@ -31,7 +31,7 @@ RUN \
         libpq=12.1-r0 \
         libressl=3.0.2-r0 \
         libxslt=1.1.34-r0 \
-        lua-resty-http=0.13-r0 \
+        lua-resty-http=0.15-r0 \
         nginx-mod-http-lua=1.16.1-r4 \
         nginx=1.16.1-r4 \
         su-exec=0.2-r1 \
