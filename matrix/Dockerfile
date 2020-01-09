@@ -17,7 +17,7 @@ RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r1 \
         libffi-dev=3.2.1-r6 \
-        libjpeg-turbo-dev=2.0.3-r0	 \
+        libjpeg-turbo-dev=2.0.4-r0	 \
         libressl-dev=3.0.2-r0 \
         libxslt-dev=1.1.34-r0 \
         linux-headers=4.19.36-r0 \
@@ -27,7 +27,7 @@ RUN \
     \
     && apk add --no-cache \
         libffi=3.2.1-r6 \
-        libjpeg-turbo=2.0.3-r0 \
+        libjpeg-turbo=2.0.4-r0 \
         libpq=12.1-r0 \
         libressl=3.0.2-r0 \
         libxslt=1.1.34-r0 \
