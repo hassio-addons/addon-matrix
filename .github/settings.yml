@@ -1,8 +1,8 @@
 ---
 repository:
-  description: "Matrix - Community Hass.io Add-on for Home Assistant"
+  description: "Matrix - Home Assistant Community Add-ons"
   homepage: https://addons.community
-  topics: matrix, riot-im, hassio-addons, hassio, hass, home-assistant, homeassistant
+  topics: matrix, riot-im, addon, addons, home-assistant, homeassistant
   private: false
   has_issues: true
   has_projects: false

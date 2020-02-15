@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Community Hass.io Add-ons: Matrix
+# Home Assistant Community Add-on: Matrix
 # Configures NGINX for use with Riot
 # ==============================================================================
 declare port

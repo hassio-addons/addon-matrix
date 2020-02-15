@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Community Hass.io Add-ons: Matrix
+# Home Assistant Community Add-on: Matrix
 # Configures the Matrix Synapse server
 # ==============================================================================
 readonly CONF="/config/matrix.yaml"
