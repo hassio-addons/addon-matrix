@@ -10,13 +10,7 @@
   "ingress_port": 1337,
   "panel_icon": "mdi:chat",
   "homeassistant": "0.92.0b2",
-  "arch": [
-    "aarch64",
-    "amd64",
-    "armhf",
-    "armv7",
-    "i386"
-  ],
+  "arch": ["aarch64", "amd64", "armhf", "armv7", "i386"],
   "boot": "auto",
   "hassio_api": true,
   "hassio_role": "default",
@@ -27,13 +21,9 @@
   },
   "ports_description": {
     "8448/tcp": "Matrix Synapse Home Server",
-    "80/tcp": "Riot Matrix web client (Not required for Hass.io Ingress)"
+    "80/tcp": "Riot Matrix web client (Not required for Ingress)"
   },
-  "map": [
-    "config:rw",
-    "share:rw",
-    "ssl"
-  ],
+  "map": ["config:rw", "share:rw", "ssl"],
   "options": {
     "ssl": true,
     "certfile": "fullchain.pem",
@@ -41,7 +31,7 @@
     "server_name": "hassio.local"
   },
   "schema": {
-    "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)?",
+    "log_level": "list(trace|debug|info|notice|warning|error|fatal)?",
     "ssl": "bool",
     "certfile": "str",
     "keyfile": "str",
