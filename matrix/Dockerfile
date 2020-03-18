@@ -21,7 +21,7 @@ RUN \
         libressl-dev=3.0.2-r0 \
         libxslt-dev=1.1.34-r0 \
         linux-headers=4.19.36-r0 \
-        musl-dev=1.1.24-r0 \
+        musl-dev=1.1.24-r1 \
         postgresql-dev=12.2-r0 \
         zlib-dev=1.2.11-r3 \
     \
