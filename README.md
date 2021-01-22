@@ -10,7 +10,7 @@
 ![Supports amd64 Architecture][amd64-shield]
 ![Supports i386 Architecture][i386-shield]
 
-[![GitLab CI][gitlabci-shield]][gitlabci]
+[![Github Actions][github-actions-shield]][github-actions]
 ![Project Maintenance][maintenance-shield]
 [![GitHub Activity][commits-shield]][commits]
 
@@ -101,15 +101,15 @@ SOFTWARE.
 [buymeacoffee]: https://www.buymeacoffee.com/timmo
 [clients]: https://matrix.org/docs/projects/try-matrix-now.html
 [commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-matrix.svg
-[commits]: https://github.com/hassio-addons/addon-matrix/commits/master
+[commits]: https://github.com/hassio-addons/addon-matrix/commits/main
 [contributors]: https://github.com/hassio-addons/addon-matrix/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord-shield]: https://img.shields.io/discord/478094546522079232.svg
 [discord]: https://discord.me/hassioaddons
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
 [forum]: https://community.home-assistant.io
-[gitlabci-shield]: https://gitlab.com/hassio-addons/addon-matrix/badges/master/pipeline.svg
-[gitlabci]: https://gitlab.com/hassio-addons/addon-matrix/pipelines
+[github-actions-shield]: https://github.com/hassio-addons/addon-matrix/workflows/CI/badge.svg
+[github-actions]: https://github.com/hassio-addons/addon-matrix/actions
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [issue]: https://github.com/hassio-addons/addon-matrix/issues
 [license-shield]: https://img.shields.io/github/license/hassio-addons/addon-matrix.svg
