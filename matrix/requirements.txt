@@ -1,2 +1,2 @@
-matrix-synapse==1.33.0
+matrix-synapse==1.33.1
 pysaml2==6.5.0
