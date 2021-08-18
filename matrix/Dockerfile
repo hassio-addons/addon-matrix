@@ -37,7 +37,7 @@ RUN \
         nginx=1.14.2-2+deb10u4 \
     \
     && curl https://bootstrap.pypa.io/get-pip.py | python3 \
-    && pip install \
+    && pip install --no-cache-dir \
         -r /tmp/requirements.txt \
     \
     && mkdir -p /opt/element \
