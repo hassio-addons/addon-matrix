@@ -6,10 +6,5 @@
 # Wait for Synapse to start
 bashio::net.wait_for 8448
 
-# Disable HA Authentication if front door is open
-if bashio::config.true 'leave_front_door_open'; then
-    export DISABLE_HA_AUTHENTICATION=true
-fi
-
 bashio::log.info "Starting NGINX..."
 exec nginx

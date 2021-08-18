@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base-python/amd64:6.0.0
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:4.2.3
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -14,49 +14,61 @@ COPY requirements.txt /tmp/
 
 # Setup Matrix Synapse
 RUN \
-    apk add --no-cache --virtual .build-dependencies \
-        build-base=0.5-r2 \
-        libffi-dev=3.3-r2 \
-        libjpeg-turbo-dev=2.0.6-r0	 \
-        libressl-dev=3.1.5-r0 \
-        libxslt-dev=1.1.34-r0 \
-        linux-headers=5.7.8-r0 \
-        musl-dev=1.2.2-r0 \
-        postgresql-dev=13.1-r2 \
-        zlib-dev=1.2.11-r3 \
+    apt-get update \
+    && apt-get install -y --no-install-recommends \
+        build-essential=12.6 \
+        libffi-dev=3.2.1-9 \
+        libjpeg-dev=1:1.5.2-2+deb10u1 \
+        libpq-dev=11.12-0+deb10u1 \
+        libssl-dev=1.1.1d-0+deb10u6 \
+        libwebp-dev=0.6.1-2+deb10u1 \
+        libxml++2.6-dev=2.40.1-3 \
+        libxslt1-dev=1.1.32-2.2~deb10u1 \
+        rustc=1.41.1+dfsg1-1~deb10u1 \
+        zlib1g-dev=1:1.2.11.dfsg-1 \
+        \
+        python3=3.7.3-1 \
+        libjpeg62-turbo=1:1.5.2-2+deb10u1 \
+        libpq5=11.12-0+deb10u1 \
+        libwebp6=0.6.1-2+deb10u1 \
+        xmlsec1=1.2.27-2 \
+        libjemalloc2=5.1.0-3 \
+        openssl=1.1.1d-0+deb10u6 \
+        nginx=1.14.2-2+deb10u4 \
     \
-    && apk add --no-cache \
-        libffi=3.3-r2 \
-        libjpeg-turbo=2.0.6-r0 \
-        libpq=13.1-r2 \
-        libressl=3.1.5-r0 \
-        libxslt=1.1.34-r0 \
-        lua-resty-http=0.15-r0 \
-        nginx-mod-http-lua=1.18.0-r13 \
-        nginx=1.18.0-r13 \
-        su-exec=0.2-r1 \
-        tiff=4.1.0-r2 \
-        zlib=1.2.11-r3 \
-    \
-    && pip3 install \
-        --no-cache-dir \
-        --find-links "https://wheels.home-assistant.io/alpine-3.11/${BUILD_ARCH}/" \
+    && curl https://bootstrap.pypa.io/get-pip.py | python3 \
+    && pip install \
         -r /tmp/requirements.txt \
     \
-    && mkdir -p /opt/riot \
-    && curl -J -L -o /tmp/riot.tar.gz \
-        "https://github.com/vector-im/riot-web/releases/download/v1.6.4/riot-v1.6.4.tar.gz" \
-    && tar xzf /tmp/riot.tar.gz -C /opt/riot --strip 1 \
+    && mkdir -p /opt/element \
+    && curl -J -L -o /tmp/element.tar.gz \
+        "https://github.com/vector-im/element-web/releases/download/v1.8.1/element-v1.8.1.tar.gz" \
+    && tar xzf /tmp/element.tar.gz -C /opt/element --strip 1 \
+    && mv /opt/element/config.sample.json /opt/element/config.json \
     \
     && find /usr/local \
         \( -type d -a -name test -o -name tests -o -name '__pycache__' \) \
         -o \( -type f -a -name '*.pyc' -o -name '*.pyo' \) \
         -exec rm -rf '{}' + \
     \
-    && apk del --purge .build-dependencies \
+    && apt-get purge -y --auto-remove \
+        build-essential \
+        libffi-dev \
+        libjpeg-dev \
+        libpq-dev \
+        libssl-dev \
+        libwebp-dev \
+        libxml++2.6-dev \
+        libxslt1-dev \
+        rustc \
+        zlib1g-dev \
+    \
     && rm -fr \
+        /tmp/* \
         /etc/nginx \
-        /tmp/*
+        /var/{cache,log}/* \
+        /var/lib/apt/lists/*
+
 
 # Copy root filesystem
 COPY rootfs /
