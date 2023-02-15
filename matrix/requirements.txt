@@ -1,2 +1,2 @@
 matrix-synapse==1.77.0
-pysaml2==7.2.1
+pysaml2==7.4.0
